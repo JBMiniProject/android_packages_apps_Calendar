@@ -15,13 +15,13 @@
 -->
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#fafafa"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="#ff000000"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <RelativeLayout
         android:id="@+id/event_info_loading_msg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
         <ProgressBar
             android:id="@+id/event_info_progress_bar"
             android:layout_width="100dip"
@@ -41,12 +41,12 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/event_info_scroll_view"
         android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_weight="1"
-        android:layout_height="match_parent">
+        android:layout_height="fill_parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="16dip"
@@ -58,7 +58,7 @@
             -->
             <LinearLayout
                 android:id="@+id/event_info_headline"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="12dip"
                 android:paddingBottom="16dip"
@@ -66,7 +66,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <!-- WHAT -->
@@ -82,6 +82,7 @@
                         android:paddingLeft="16dip"
                         android:paddingRight="16dip"
                         style="?android:attr/textAppearanceLarge"
+                        android:textIsSelectable="true"
                         android:textSize="30sp" />
                     <!-- BUTTONS -->
                     <LinearLayout
@@ -129,6 +130,7 @@
                     android:paddingLeft="16dip"
                     android:paddingRight="16dip"
                     android:textColor="@color/event_info_headline_color"
+                    android:textIsSelectable="true"
                     style="?android:attr/textAppearanceLarge" />
 
                 <TextView
@@ -144,7 +146,7 @@
                 <!-- WHERE -->
                 <TextView
                     android:id="@+id/where"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:singleLine="false"
@@ -154,6 +156,7 @@
                     android:paddingRight="16dip"
                     android:textColor="@color/event_info_headline_color"
                     android:textColorLink="@color/event_info_headline_link_color"
+                    android:textIsSelectable="true"
                     style="?android:attr/textAppearanceLarge" />
             </LinearLayout>
 
@@ -161,9 +164,8 @@
             <LinearLayout
                 android:id="@+id/organizer_container"
                 android:visibility="gone"
-                android:layout_marginTop="10dip"
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/organizer_label"
@@ -186,6 +188,7 @@
                     android:layout_marginRight="8dip"
                     android:textColor="@color/event_info_organizer_color"
                     style="?android:attr/textAppearanceSmall"
+                    android:textIsSelectable="true"
                     android:textSize="18sp"/>
             </LinearLayout>
 
@@ -199,11 +202,11 @@
                 android:id="@+id/response_container"
                 android:visibility="gone"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/response_label"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="8dip"
@@ -216,7 +219,7 @@
                     android:text="@string/view_event_response_label" />
                 <RadioGroup
                     android:id="@+id/response_value"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:minHeight="52dip"
                     android:layout_gravity="center_vertical"
@@ -260,19 +263,19 @@
                 android:id="@+id/email_attendees_container"
                 android:visibility="gone"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <View
                     android:background="?android:attr/listDivider"
                     android:layout_height="1px"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_marginLeft="8dip"
                     android:layout_marginRight="0dip" />
                 <Button
                     android:id="@+id/email_attendees_button"
                     android:text="@string/email_guests_label"
                     android:layout_height="50dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="0dp"
                     android:layout_gravity="left"
@@ -282,7 +285,7 @@
                     android:layout_marginBottom="0dip"
                     android:textAllCaps="false"
                     android:textSize="16sp"
-                    android:textColor="#777777"
+                    android:textColor="#ff777777"
                     android:background="?android:attr/selectableItemBackground"
                     android:drawableLeft="@drawable/event_info_mail_button"
                     android:drawablePadding="8dp"
@@ -294,18 +297,18 @@
                 android:id="@+id/launch_custom_app_container"
                 android:visibility="gone"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <View
                     android:background="?android:attr/listDivider"
                     android:layout_height="1px"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_marginLeft="8dip"
                     android:layout_marginRight="0dip" />
                 <Button
                     android:id="@+id/launch_custom_app_button"
                     android:layout_height="50dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="0dp"
                     android:layout_gravity="left"
@@ -315,7 +318,7 @@
                     android:layout_marginBottom="0dip"
                     android:textAllCaps="false"
                     android:textSize="16sp"
-                    android:textColor="#777777"
+                    android:textColor="#ff777777"
                     android:background="?android:attr/selectableItemBackground"
                     android:drawablePadding="8dp"
                     style="@style/TextAppearance.EditEvent_LabelSmall" />
@@ -327,7 +330,7 @@
                 android:textColor="@color/event_info_body_color"
                 android:orientation="vertical"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:visibility="gone"
                 android:layout_marginTop="5dip"/>
 
@@ -335,11 +338,11 @@
             <LinearLayout
                 android:id="@+id/reminders_row"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="8dip"
@@ -352,7 +355,7 @@
                     android:text="@string/event_info_reminders_label" />
                 <LinearLayout
                     android:id="@+id/reminder_items_container"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-8dp"
                     android:layout_weight="1"
@@ -361,13 +364,13 @@
                     android:id="@+id/reminder_add"
                     android:text="@string/reminders_label"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="0dp"
                     android:layout_marginBottom="-6dp"
                     android:gravity="center_vertical|left"
                     android:textSize="18sp"
-                    android:textColor="#FF777777"
+                    android:textColor="#ff777777"
                     android:minHeight="38dip"
                     android:background="?android:attr/selectableItemBackground"
                     android:contentDescription="@string/accessibility_add_reminder"
